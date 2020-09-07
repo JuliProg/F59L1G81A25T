@@ -26,9 +26,9 @@ namespace F59L1G81A25T
 
         ChipAssembly()
         {
-            myChip.devManuf = "SAMSUNG";
+            myChip.devManuf = "ESMT";
             myChip.name = "F59L1G81A25T";
-            myChip.chipID = "ECF1001540";      // device ID - ECh F1h 00h 15h 40h (k9f1g08u0d_00.pdf page 36)
+            myChip.chipID = "92F1809540";      // device ID - 92h F1h 80h 95h 40h (F59L1G81A.pdf page 20)
 
             myChip.width = Organization.x8;    // chip width - 8 bit
             myChip.bytesPP = 2048;             // page size - 2048 byte (2Kb)
@@ -72,8 +72,8 @@ namespace F59L1G81A25T
             myChip.registers.Add(
                 "Id Register").
                 Size(5).
-                Operations("ReadId_90h").               
-                Interpretation(ID_interpreting);          // From here
+                Operations("ReadId_90h");               
+                //Interpretation(ID_interpreting);          // From here
 
             #endregion
 
